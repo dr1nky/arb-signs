@@ -130,9 +130,20 @@
 //   }
 // }
 
+.logo {
+  a {
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+  }
+}
+
 header {
+  .logo {
+    padding: 20px;
+  }
   .overlay {
-    background-color: rgb(26, 5, 85);
+    background-color: black;
     position: fixed;
     top: 0;
     left: 0;
@@ -148,7 +159,7 @@ header {
 }
 
 nav.navigation {
-  background: grey;
+  background: #555;
   position: fixed;
   top: 0;
   right: 0;
@@ -177,25 +188,108 @@ nav.navigation {
     }
   }
   .cta-row {
-    
     border-bottom: 1px solid rgb(104, 102, 102);
     padding: 0 0 20px;
     li {
       a {
+        font-weight: 600;
         margin: 15px 0 0;
         padding: 7.5px 15px;
-        background: rgb(216, 240, 6);
+        background: lightyellow;
         display: inline-block;
-        border: 1px #006d6d solid;
+        border: 1px solid lightyellow;
         &:hover {
-          background: #006d6d;
-          border-color: #005959;
+          background: yellow;
+          border-color: black;
           text-decoration: none;
         }
       }
+      a.alt {
+        background-color: lightyellow;
+      }
+    }
+  }
+  .nav-logo {
+    border-bottom: 1px solid rgb(104, 102, 102);
+    padding: 20px;
+    text-align: center;
+    img {
+      width: 175px;
+      height: auto;
     }
   }
 }
 nav.navigation[active]{
   transform: translateX(0);
+}
+
+@media all and (min-width: 800px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+    }
+    .overlay {
+      display: none;
+    }
+    .overlay[active]{
+      display: none;
+    }
+    nav.navigation {
+      background: initial;
+      top: initial;
+      right: initial;
+      bottom: initial;
+      width: initial;
+      z-index: initial;
+      transform: initial;
+      transition: initial;
+      .menu-icon {
+        display: none;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline-block;
+          list-style: none;
+          text-align: initial;
+          width: initial;
+          a {
+            display: initial;
+            padding: initial;
+            text-decoration: initial;
+          }
+        }
+      }
+      .cta-row {
+        border-bottom: initial;
+        li {
+          a {
+            font-weight: 600;
+            margin: initial;
+            padding: initial;
+            background:initial;
+            display: inherit;
+            border: initial;
+            &:hover {
+              background: initial;
+              border-color: initial;
+              text-decoration: initial;
+            }
+          }
+          a.alt {
+            background-color: initial;
+          }
+        }
+      }
+      .nav-logo {
+        display: none;
+      }
+    }
+    nav.navigation[active]{
+      transform: translateX(0);
+    }
+  }
 }
