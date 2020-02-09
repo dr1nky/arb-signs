@@ -1,0 +1,15 @@
+@import "../variables.scss";
+
+.main {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  @media screen and (min-width: $tablet) {
+    top: 90.4px;
+  }
+  @media screen and (min-width: $laptop) {
+    top: 95px;
+  }
+}

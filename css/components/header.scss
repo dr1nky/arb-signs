@@ -1,0 +1,200 @@
+@import "../variables.scss";
+
+// header {
+//   position: absolute;
+//   width: 100%;
+//   height: 100px;
+//   z-index: 10;
+//   .container {
+//     .row {
+//       align-items: center;
+//       justify-content: space-between;
+//       height: 100px;
+//       .logo {
+//         font-size: 1.25rem;
+//         font-weight: 600;
+//         a {
+//           text-decoration: none;
+//         }
+//       }
+//       .navigation {
+//         background: lightgray;
+//         display: none;
+//         position: absolute;
+//         left: 0;
+//         top: 100%;
+//         width: 100%;
+//         ul {
+//           align-items: center;
+//           display: flex;
+//           flex-wrap: wrap;
+//           justify-content: space-between;
+//           margin: 0;
+//           padding: 0;
+//           li {
+//             list-style: none;
+//             text-align: center;
+//             width: 100%;
+//             a {
+//               display: block;
+//               padding: 10px 15px;
+//               text-decoration: none;
+//             }
+//           }
+//           li.button {
+//             order: -1;
+//             a {
+//               font-weight: 600;
+//             }
+//           }
+//           li.button.secondary {
+//             border-bottom: 1px solid grey;
+//           }
+//         }
+//       }
+//       [active] {
+//         display: block;
+//       }
+//       .toggle {
+//         // order: 1;
+//         cursor:pointer;
+//         .bars {
+//           background:black;
+//           display: inline-block;
+//           height: 2px;
+//           position: relative;
+//           // transition: all 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+//           width: 18px;
+//         }
+//         .bars:before,
+//         .bars:after {
+//           background: inherit;
+//           content: '';
+//           display: block;
+//           height: 100%;
+//           position: absolute;
+//           width: 100%;
+//         }
+//         .bars::before {
+//           top: 5px;
+//         }
+//         .bars::after {
+//           top: -5px;
+//         }
+//       }
+//       /* active toggle */
+//       .active .bars,
+//       [active] .bars {
+//         transform: rotate(45deg);
+//       }
+//       .active .bars::before,
+//       [active] .bars::before {
+//         transform: translateY(-5px) translateX(0px) rotate(90deg)
+//       }
+//       .active .bars::after,
+//       [active] .bars::after {
+//         display: none
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   header {
+//     background: grey;
+//     .container {
+//       .row {
+//         .logo {
+//         }
+//         .navigation {
+//           position: relative;
+//           // text-align: left;
+//           background: none;
+//           // top: initial;
+//           // left: initial;
+//           display: flex;
+//           justify-content: flex-end;
+//           align-items: center;
+//           ul {
+//             display: flex;
+//             a {
+//               position: relative;
+//             }
+//           }
+//         }
+//         .toggle {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }
+
+header {
+  .overlay {
+    background-color: rgb(26, 5, 85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: .2s ease-in-out .2s;
+    z-index: 1000;
+  }
+  .overlay[active]{
+    opacity: 0.9;
+  }
+}
+
+nav.navigation {
+  background: grey;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: .2s ease-in-out .2s;
+  .menu-icon {
+    position: absolute;
+    padding: 15px;
+    right: 100%;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      text-align: center;
+      width: 100%;
+      a {
+        display: block;
+        padding: 15px 10px;
+        text-decoration: none;
+      }
+    }
+  }
+  .cta-row {
+    border-bottom: 1px solid rgb(104, 102, 102);
+    padding: 0 0 20px;
+    li {
+      a {
+        margin: 15px 0 0;
+        padding: 7.5px 15px;
+        background: rgb(216, 240, 6);
+        display: inline-block;
+        border: 1px #006d6d solid;
+        &:hover {
+          background: #006d6d;
+          border-color: #005959;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+nav.navigation[active]{
+  transform: translateX(0);
+}

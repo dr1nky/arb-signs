@@ -115,8 +115,8 @@ nav {
   }
 }
 
-/* Tablet menu */
-@media all and (min-width: 600px ) {
+/* Tablet => */
+@media all and (min-width: $tablet ) {
   ul.menu {
     justify-content: center;
     .logo {
@@ -132,17 +132,6 @@ nav {
       order: 1 !important;
       display: block;
     }
-    // .item.button a {
-    //   padding: 7.5px 15px;
-    //   background: teal;
-    //   border: 1px #006d6d solid;
-    //   border-radius: 50em;
-    //   &:hover {
-    //     background: #006d6d;
-    //     border-color: #005959;
-    //     text-decoration: none;
-    //   }
-    // }
     .item.button.secondary {
       border: 0;
       padding: 0 !important;
@@ -150,8 +139,8 @@ nav {
   }
 }
 
-/* Desktop menu */
-@media all and (min-width: 900px) {
+/* Laptop => */
+@media all and (min-width: $laptop) {
   .item {
       display: block !important;
       width: auto !important;
