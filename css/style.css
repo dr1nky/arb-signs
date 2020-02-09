@@ -425,6 +425,10 @@ nav.navigation {
     nav.navigation .nav-logo img {
       width: 175px;
       height: auto; }
+  nav.navigation .social ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
 nav.navigation[active] {
   transform: translateX(0); }
@@ -440,7 +444,7 @@ nav.navigation[active] {
       display: none; }
     .container nav.navigation {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       background: initial;
       position: initial;
@@ -485,8 +489,8 @@ nav.navigation[active] {
             text-decoration: initial; }
         .container nav.navigation .cta-row li a.alt {
           background-color: initial; }
-      .container nav.navigation .links ul li a {
-        padding: 10px; }
+      .container nav.navigation .links ul li {
+        padding: 0 20px; }
       .container nav.navigation .nav-logo {
         display: none; }
     .container nav.navigation[active] {

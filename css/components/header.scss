@@ -103,6 +103,13 @@ nav.navigation {
       height: auto;
     }
   }
+  .social {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
 nav.navigation[active]{
   transform: translateX(0);
@@ -123,7 +130,7 @@ nav.navigation[active]{
     }
     nav.navigation {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
 
       background: initial;
@@ -185,8 +192,8 @@ nav.navigation[active]{
       .links {
         ul {
           li {
+            padding: 0 20px;
             a {
-              padding: 10px;
             }
             &:hover {
             }
